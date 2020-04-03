@@ -24,9 +24,19 @@ Clonar o repositório
 git clone git@github.com:robsonpedroso/lab-rabbitmq.git
 ```
 
-Rodar o comando `vagrant up` para subir o server com o RabbitMQ instalado
+Rodar o comando `vagrant up` para subir o server.
+	- Esse comando vai subir uma maquina com o IP privado `192.168.101.10`;
+	- Atualizar o `apt-get`;
+	- Instalar o docker e o `docker-compose`;
+
+Acesse o server com o comando `vagrant ssh` e execute o script `start_all.sh`.
+	- A pasta raiz do projeto esta mapeada para a pasta `/curso/`;
+	- Para executar o script `start_all.sh` basta acessar a pasta `cd /curso/`.
+	- Executar o script como root `sudo ./start_all.sh`
+
+Dados do RabbitMQ:
  - IP do servidor `192.168.101.10`
-	- Porta do dashboard: 8080
+	- Porta do dashboard: `8080`
  - Usuário: `admin`
  - Senha: `123456`
 
