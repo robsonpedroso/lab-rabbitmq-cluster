@@ -10,7 +10,7 @@ export TIMEOUT=7200
 
 sudo docker-compose -f docker-compose.yml up
 
-sleep 15
+sleep 10
 
 sudo docker exec -ti rabbitmq2 bash -c "$JOIN_RABBIT1"
 sudo docker exec -ti rabbitmq3 bash -c "$JOIN_RABBIT1"

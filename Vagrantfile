@@ -1,11 +1,16 @@
 Vagrant.configure("2") do |config|
   config.vm.define "ubuntu" do |ubuntu|
+    ubuntu.vm.provider "virtualbox" do |v|
+      v.memory = 4096
+      v.cpus = 2
+    end
+    
     # configuration ubuntu image with ubuntu 19
     ubuntu.vm.box = "ubuntu/eoan64"
 
     # configuration timeout for 20 minutes
     ubuntu.vm.boot_timeout = 1200
-    ubuntu.vm.memory = 4098
+    
 
     # configuration IP for visualization in host
     ubuntu.vm.network "private_network", ip: "192.168.101.10"
